@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <Searchbar />
+    <Searchbar @searchedFilm="searchItem"/>
   </div>
 </template>
 
 <script>
 import Searchbar from './components/Searchbar.vue'
-
 
 export default {
   name: 'App',

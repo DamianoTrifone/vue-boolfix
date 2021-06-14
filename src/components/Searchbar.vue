@@ -1,15 +1,23 @@
 <template>
-  <div class="searchbar">
-      <div class="ricerca">
-        <input type="text">
-        <button>Cerca</button>
+    <div class="searchbar">
+        <div class="ricerca">
+            <input type="text" placeholder="Ricerca qui il tuo titolo"  
+            v-model.trim="usersearch"
+            @keyup="$emit('searchedFilm', usersearch)">
+            <button>Cerca</button>
+            </div>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
-    name:"Searchbar"
+    name:"searchbar",
+    data(){
+        return{
+            usersearch: ''
+        }
+    }
+   
 }
 </script>
 
@@ -23,7 +31,7 @@ export default {
         display: flex;
         justify-content: flex-end;
         align-self: flex-end;
-        }
+    }
 
     .ricerca input{
         margin-top: 40px;
