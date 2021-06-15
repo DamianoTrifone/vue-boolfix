@@ -63,5 +63,6 @@ export default {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+
    }
 </style>
