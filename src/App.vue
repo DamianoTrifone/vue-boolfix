@@ -41,7 +41,7 @@ export default {
           .get(`${this.api_url}${this.api_key}&query=${this.query}`)
           .then(
               (result) => {
-                  console.log(result.data);
+                  // console.log(result.data);
                   this.films = result.data.results; 
                   console.log(this.films);
               }
@@ -57,4 +57,11 @@ export default {
     padding: 0;
     box-sizing: border-box;
   }
+
+  .film_container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+   }
 </style>
