@@ -1,7 +1,7 @@
 <template>
     <div class="searchbar">
         <div class="ricerca">
-            <input type="text" placeholder="Ricerca qui il tuo titolo"  
+            <input type="text" placeholder="Inserisci il titolo del film"  
             v-model.trim="usersearch"
             @keyup="$emit('searchedFilm', usersearch)">
             <button>Cerca</button>
