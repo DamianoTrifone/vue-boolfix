@@ -2,7 +2,7 @@
     <div class="searchbar">
         <div class="ricerca">
             <img src="https://fontmeme.com/permalink/210615/5f7112a65daf3df48c305aae945b6fbd.png" alt="">
-            <input type="text" placeholder="Inserisci il titolo del film"  
+            <input type="text" placeholder="Ricerca il film o la serie"  
             v-model.trim="usersearch"
             @keyup="$emit('searchedFilm', usersearch)">
             <button>Cerca</button>
