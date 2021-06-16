@@ -46,7 +46,6 @@ export default {
             axios.spread((result1, result2) => {
             this.films = result1.data.results; 
             this.films = result2.data.results;
-            console.log(this.films);
                   }
           )) 
     },
@@ -62,10 +61,8 @@ export default {
   }
 
   .film_container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
    }
 </style>
