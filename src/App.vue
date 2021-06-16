@@ -28,8 +28,9 @@ export default {
     return {
       newFilm: "", 
       films: [],
-      api_url: "https://api.themoviedb.org/3/search/movie?", 
-      api_key: "api_key=a31b6f1e88fbabef39333e8fbdcf391b", 
+      api_url_film: "https://api.themoviedb.org/3/search/movie?", 
+      api_url_series: "https://api.themoviedb.org/3/search/tv?",
+      api_key: "api_key=61f9977f23d7c1c58e53f8d7ecd5f133", 
       query: "", 
       language: ""
     }
@@ -37,15 +38,17 @@ export default {
    methods: {
     searchItem(string) {
       this.query = string; 
-          axios
-          .get(`${this.api_url}${this.api_key}&query=${this.query}`)
+           const film = axios.get(`${this.api_url_film}${this.api_key}&query=${this.query}`)
+           const series= axios.get(`${this.api_url_series}${this.api_key}&query=${this.query}`)
+
+          axios.all([film, series])
           .then(
-              (result) => {
-                  // console.log(result.data);
-                  this.films = result.data.results; 
-                  console.log(this.films);
-              }
-          ) 
+            axios.spread((result1, result2) => {
+            this.films = result1.data.results; 
+            this.films = result2.data.results;
+            console.log(this.films);
+                  }
+          )) 
     },
 }
 }
@@ -63,6 +66,6 @@ export default {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-
+    width: 80%;
    }
 </style>
