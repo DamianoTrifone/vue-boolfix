@@ -50,5 +50,6 @@ export default {
     .ricerca button{
         margin-top: 40px;
         margin-right: 20px;
+        padding: 2px 8px;
     }
 </style>

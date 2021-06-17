@@ -7,7 +7,7 @@
         <h2>{{ item.name }}</h2>
         <h3>Titolo originale: {{ item.original_name }}</h3>
         <h3>Lingua originale: {{ item.original_language }} <img class="bandiera" src="../assets/it.png" alt="Bandiera Italiana" v-if="item.original_language == 'it'"><img class="bandiera" src="../assets/en.png" alt="Bandiera Inglese" v-if="item.original_language == 'en'"></h3>
-        <h4>Voto degli utenti: {{ item.vote_average }} - {{ vote() }}</h4>  
+        <h4>Voto degli utenti:</h4>  
         <div>
             <i 
             v-for="n in vote()"
@@ -69,5 +69,11 @@ export default {
         width: 50%;
         padding: 40px;
         list-style: none;
+    }
+
+    i{
+        font-size: 15px;
+        margin-left: 13px;
+        margin-top: 8px;
     }
 </style>
