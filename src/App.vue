@@ -60,10 +60,4 @@ export default {
     padding: 0;
     box-sizing: border-box;
   }
-
-  .film_container{
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
-   }
 </style>

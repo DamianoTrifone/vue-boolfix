@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss">
     main{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
     .bandiera{
@@ -48,12 +48,10 @@ export default {
     }
     .copertina{
         width: 342px;
+        height: 420px;
         padding: 15px;
     }
     .film{
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: center;
         float: left;
         width: 500px;
         padding: 20px 20px;
@@ -63,7 +61,8 @@ export default {
     h3,
     h4 {
         padding-left: 15px;
-    }
+        max-height: 100px;
+     }
 
     li{
         width: 50%;
@@ -75,5 +74,6 @@ export default {
         font-size: 15px;
         margin-left: 13px;
         margin-top: 8px;
+        color: yellow;
     }
 </style>
